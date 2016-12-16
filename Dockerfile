@@ -14,5 +14,7 @@ RUN del C:\temp\elasticsearch-1.7.5.zip
 RUN c:\services\elasticsearch-1.7.5\bin\plugin.bat install mobz/elasticsearch-head
 
 EXPOSE 9200 9300
+VOLUME c:\\services\\elasticsearch-1.7.5\\config
+VOLUME c:\\services\\elasticsearch-1.7.5\\data
 
 CMD [ "c:\\services\\elasticsearch-1.7.5\\bin\\elasticsearch.bat"]
